@@ -1,0 +1,85 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+{% load static %}
+<script src="{% static 'js/script.js' %}"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+
+    <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="panel-title">Contact me!</div>
+            </div>
+            <div class="panel-body">
+                <form action="/survey_reply" method="POST">
+                    {% csrf_token %}
+
+                    <div id="div_id_username" class="form-group required">
+                        <label for="id_username" class="control-label col-md-4  requiredField"> First name<span
+                                class="asteriskField">*</span> </label>
+                        <div class="controls col-md-8 ">
+                            <input class="input-md  textinput textInput form-control" id="id_username" maxlength="30"
+                                name="firstname" placeholder="Lovely" style="margin-bottom: 10px" type="text" />
+                        </div>
+                    </div>
+                    <div id="div_id_username" class="form-group required">
+                        <label for="id_username" class="control-label col-md-4  requiredField"> Last name<span
+                                class="asteriskField">*</span> </label>
+                        <div class="controls col-md-8 ">
+                            <input class="input-md  textinput textInput form-control" id="id_username" maxlength="30"
+                                name="lastname" placeholder="Lover" style="margin-bottom: 10px" type="text" />
+                        </div>
+                    </div>
+                    <div id="div_id_email" class="form-group required">
+                        <label for="id_email" class="control-label col-md-4  requiredField"> E-mail<span
+                                class="asteriskField">*</span> </label>
+                        <div class="controls col-md-8 ">
+                            <input class="input-md emailinput form-control" id="id_email" name="email"
+                                placeholder="Your current email address" style="margin-bottom: 10px" type="email" />
+                        </div>
+                    </div>
+                    <div id="div_id_gender" class="form-group required">
+                        <label for="id_gender" class="control-label col-md-4  requiredField"> Preference<span
+                                class="asteriskField">*</span> </label>
+                        <div class="controls col-md-8 " style="margin-bottom: 10px">
+                            <label class="radio-inline"> <input type="radio" name="gender" id="id_gender_1" value="M"
+                                    style="margin-bottom: 10px">Vegan</label>
+                            <label class="radio-inline"> <input type="radio" name="gender" id="id_gender_2" value="F"
+                                    style="margin-bottom: 10px">Whey </label>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="control-label col-md-4">Comments</label>
+                        <div class="controls col-md-8 " style="margin-bottom: 10px">
+                            <div class="controls col-md-8 ">
+                                <input class="input-md textinput textInput form-control" name="comments"
+                                    placeholder="Comment/Questions" style="margin-bottom: 10px" type="comment" />
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="aab controls col-md-4 "></div>
+                        <div class="controls col-md-8 ">
+                            <input type="submit" name="submit" class="btn btn-primary btn btn-info"
+                                id="submit-id-signup" />
+                        </div>
+                    </div>
+
+                    <!-- </form> -->
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</div>

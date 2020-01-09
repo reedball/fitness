@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .speech-bubble {
+            position: relative;
+            background: #00daf1;
+            border-radius: .4em;
+        }
+
+        .speech-bubble:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border: 28px solid transparent;
+            border-top-color: #00daf1;
+            border-bottom: 0;
+            border-left: 0;
+            margin-left: -14px;
+            margin-bottom: -28px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p class="speech-bubble" class="speech-bubble:after">HI</p>
+</body>
+
+</html>
