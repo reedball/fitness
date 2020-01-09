@@ -117,6 +117,7 @@ def user_account(request, user_id):
     return render(request, "coaching_app/user_account.html", context)
 
 def view(request, post_id):
+    # reg_user = User.objects.filter(username=request.session["username"])[0]
     request.session['postid'] = post_id
     context = {
         "selected_post": Post.objects.get(id=post_id)

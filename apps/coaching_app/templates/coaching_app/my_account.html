@@ -84,6 +84,7 @@
     <h3 class="my-4">My Fitness Posts</h3>
     
     <div>
+      {% if last_post %}
       <div class="row">
 
         <div class="col-md-8" style="height: 400px; width: 760px; margin-bottom: 20px;">
@@ -98,6 +99,12 @@
         </div>
 
       </div>
+      {% else %}
+      <div>
+        <h5>Hello {{reg_user.first_name}}, and welcome to My Fitness Journey. A platform to share your healthy and active lifestyle with freinds and help motivate one another. Get started by creating your first post!</h5>
+      </div>
+      {% endif %}
+      
       <div class="row">
         {% for post in users_post %}
         
