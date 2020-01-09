@@ -101,7 +101,7 @@
           <h3 class="my-3">{{selected_post.post_title}}</h3>
           <p>{{selected_post.description}}</p>
         {% if selected_post.posted_by.username == request.session.username %}
-            <a href="/remove/{{post.id}}">Delete Post</a>
+            <a href="/remove/{{selected_post.id}}">Delete Post</a>
         {%endif%}
         </div>
 

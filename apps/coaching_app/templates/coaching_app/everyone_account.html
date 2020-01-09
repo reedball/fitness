@@ -76,14 +76,14 @@
       </div>
       <div class="col-sm-5">
         <h3>
-          <a href="/users/{{post.posted_by.id}}">{{post.posted_by.first_name}}</a>
+          {{post.post_title}}
         </h3>
         <p style="color: gray;">
           {{post.created_at}}
         </p>
-        <h3>
-          {{post.post_title}}
-        </h3>
+        <p>
+          Posted by: <a href="/users/{{post.posted_by.id}}">{{post.posted_by.first_name}} {{post.posted_by.last_name}}</a>
+        </p>
         <p>{{post.description}}</p>
         {% if post.posted_by.username == request.session.username %}
             <a href="/remove/{{post.id}}">Delete Post</a>
