@@ -83,6 +83,16 @@
 
     <!-- Custom styles for this template -->
     <link href="css/modern-business.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/fitness/apps/coaching_app/static/js/sampleworkout.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#samplemm").click(function () {
+                const $video = $("#video")
+                $video.append(`<iframe width="710" height="397" src="https://www.youtube.com/embed/fzBgSITMnGo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`)
+            })
+        });
+    </script>
 
 </head>
 
@@ -174,7 +184,7 @@
 
 
 
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <form>
                     <p><input type="text" id="search" placeholder="Type something..." autocomplete="off"
@@ -191,28 +201,30 @@
                 </div>
                 <script>
                     ytEmbed.init({ 'block': 'ytThumbs', 'key': 'AIzaSyCVuN7GOKmyHIT0xtpd2WTM4n9pEI-zwXQ', 'q': 'prank', 'type': 'search', 'results': 1, 'meta': true, 'player': 'embed', 'layout': 'full' });
-                </script>
+                </script> -->
 
-                <!-- <div id="results">
+        <!-- <div id="results">
                     <h3>hello</h3>
                 </div> -->
 
-            </div>
-        </div>
+        <!-- </div>
+        </div> -->
 
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <p><input id="samplemm" type="submit" value="Today's Recommendation"
                         class="form-control btn btn-primary w100"></p>
             </div>
-        </div>
+        </div> -->
 
         <!-- <button id="samplemm">MM100</button> -->
         <!-- <p id="samplemm">Morning Meltdown 100!</p> -->
-        <div id="video"></div>
+        <!-- <div id="video"></div> -->
 
         <!-- scripts -->
 
+        <h1 id="samplemm">MM100</h1>
+        <div id="video"></div>
 
 
 
@@ -224,13 +236,14 @@
     <!-- <footer class="py-5 bg-dark">
         <div class="container">
             <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
-        </div>
-        <!-- /.container -->
+        </div> -->
+    <!-- /.container -->
     <!-- </footer> -->
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 
